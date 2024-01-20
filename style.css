@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+:root{
+  --main-color-:#252424;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto';
+}
+body {
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: var(--main-color-);
+  }
+
+  #minesweeper-board {
+    width: 469px;
+    height: 475px;
+    border: 3px solid #000;
+    display: grid;
+    gap: 1px;
+    grid-template-columns: repeat(15, 30px);
+    
+  }
+
+  .cell {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: rgb(20, 20, 20);
+    
+  }
+
+  .mine {
+    background:url(min.png);
+    background-size: cover;
+  }
+
+  .revealed {
+    background-color: #444;
+    cursor: default;
+  }
+
+  .number1 {
+    color: #007bff;
+  }
+
+  .number2 {
+    color: #28a745;
+  }
+
+  .number3 {
+    color: #dc3545;
+  }
+
+  #timer {
+    margin-top:10px ;
+    font-size: 18px;
+    margin-bottom: 25px;
+    color: var(--main-color-);
+  }
+
+  #button-container {
+    padding: 15px;
+    border-radius: 10px;
+    background-color:#fff;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 230px;
+    border: none;
+    outline: none;
+    margin-left: 40px;
+    justify-content: start;
+    align-items: center;
+    
+  }
+
+  button {
+    margin: 5px;
+    padding: 10px;
+    width: 100%;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: var(--main-color-);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    letter-spacing: 1PX;
+    transition: background-color 0.3s;
+  }
+
+  button:hover {
+    background-color: #0e2e38;
+  }
